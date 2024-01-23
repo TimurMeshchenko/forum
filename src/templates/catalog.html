@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" translate="no" class="adaptive">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <base href=".">
@@ -18,26 +17,27 @@
         }
     </script>
     <link rel="icon" href="{{ url_for('media', filename='favicon.ico') }}">
-    <link href="{{ url_for('static', filename='css/main-v3.min.716ab6e5b2568b3a.css') }}"  rel="stylesheet" type="text/css" onerror="reload_page()">
-    <link href="{{ url_for('static', filename='css/common.min.121bb7180e1b90be.css') }}" rel="stylesheet" type="text/css" onerror="reload_page()">
-    <link href="{{ url_for('static', filename='css/main-page-v3.min.7309e6f7f633c75b.css') }}" rel="stylesheet" type="text/css" onerror="reload_page()">
-    <link href="{{ url_for('static', filename='css/popups/productCardPopup.min.6ca2574b943416d5.css') }}" rel="stylesheet" type="text/css" onerror="reload_page()">
-    <link href="{{ url_for('static', filename='css/popups/productSelectionManager.min.2f97c2d2117bb281.css') }}" rel="stylesheet" type="text/css" onerror="reload_page()">
+    <link href="{{ url_for('static', filename='css/catalog/main-v3.min.716ab6e5b2568b3a.css') }}" rel="stylesheet"
+        type="text/css" onerror="reload_page()">
+    <link href="{{ url_for('static', filename='css/catalog/common.min.121bb7180e1b90be.css') }}" rel="stylesheet"
+        type="text/css" onerror="reload_page()">
+    <link href="{{ url_for('static', filename='css/catalog/main-page-v3.min.7309e6f7f633c75b.css') }}" rel="stylesheet"
+        type="text/css" onerror="reload_page()">
 
     {% block css %}
     {% endblock %}
 
-    {% block title %}
-    <title>Каталог</title>
-    {% endblock %}
-    </head>
-    <body>
+    {% block title %}<title>Каталог</title>{% endblock %}
+</head>
+
+<body>
     <div class="wrapper">
         <header class="header j-header header--custom-bg" style="background-image:url();">
             <div class="header__container">
                 <div class="header__bottom">
                     <div class="header__nav-element nav-element">
-                        <a class="nav-element__logo j-wba-header-item" data-wba-header-name="Main" href="/" style="width: 45px;height: 50px;">
+                        <a class="nav-element__logo j-wba-header-item" data-wba-header-name="Main" href="/"
+                            style="width: 45px;height: 50px;">
                             <img src="{{ url_for('media', filename='logo.png') }}">
                         </a>
                     </div>
@@ -55,7 +55,7 @@
                             data-link="class{merge: hasAnySuggestions() toggle=&#39;search-catalog--active&#39;}">
                             <input autocomplete="off" id="searchInput" class="search-catalog__input j-wba-header-item"
                                 data-wba-header-name="Search_text" type="search" maxlength="300"
-                                placeholder="Найти товар"
+                                placeholder="Найти статью"
                                 data-link="{:searchText:}readonly{:imageChipData}{on &#39;keydown&#39; onSearchInputKeypress}{on &#39;focus&#39; enableSuggestions}{on &#39;input&#39; showSuggestionsDebounced}"
                                 data-jsv="#69^/69^#70^/70^#71^/71^">
                             <div class="search-catalog__loading"
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="autocomplete search-catalog__autocomplete j-search-catalog-autocomplete"
-                        data-link="{if ~root.$isDesktop &amp;&amp; hasAnySuggestions() tmpl=&#39;searchSuggestionsTmpl&#39;}">
+                            data-link="{if ~root.$isDesktop &amp;&amp; hasAnySuggestions() tmpl=&#39;searchSuggestionsTmpl&#39;}">
                         </div>
                     </div>
                 </div>
@@ -330,37 +330,39 @@
 
 
                                     {% for article in articles %}
-                                    <article data-nm-id="" data-popup-nm-id="113035977" data-index="0" data-analitics-code="MCS"
-                                        data-target-url="MI" class="main-page__product product-card j-product-item product-card--hoverable j-content-item"
+                                    <article data-nm-id="" data-popup-nm-id="113035977" data-index="0"
+                                        data-analitics-code="MCS" data-target-url="MI"
+                                        class="main-page__product product-card j-product-item product-card--hoverable j-content-item"
                                         data-link="class{merge: ~parent.hideOn6 toggle=&#39;product-hide-6&#39;}class{merge: ~parent.hideOn4 toggle=&#39;product-hide-4&#39;}class{merge: ~parent.hideOn2 toggle=&#39;product-hide-2&#39;}"
                                         style="">
                                         <a href="/article/{{ article.slug }}">
-                                        <div class="product-card__wrapper">
-                                            <div class="product-card__top-wrap">
-                                                <script type="jsv#126_"></script>
-                                                <script type="jsv#127_"></script>
-                                                <script type="jsv/127_"></script>
-                                                <script type="jsv/126_"></script>
-                                                <div class="product-card__tips product-card__tips--top"> </div>
-                                                <script type="jsv#128_"></script>
-                                                <div class="product-card__img-wrap img-plug j-thumbnail-wrap" data-plug-text="Фото отсутствует">                                                 
-                                                    <img
-                                                        class="j-thumbnail" loading="lazy" width="516" height="688" src="/media/{{ article.image }}"
-                                                        onerror="reload_page()">
+                                            <div class="product-card__wrapper">
+                                                <div class="product-card__top-wrap">
+                                                    <script type="jsv#126_"></script>
+                                                    <script type="jsv#127_"></script>
+                                                    <script type="jsv/127_"></script>
+                                                    <script type="jsv/126_"></script>
+                                                    <div class="product-card__tips product-card__tips--top"> </div>
+                                                    <script type="jsv#128_"></script>
+                                                    <div class="product-card__img-wrap img-plug j-thumbnail-wrap"
+                                                        data-plug-text="Фото отсутствует">
+                                                        <img class="j-thumbnail" loading="lazy" width="516" height="688"
+                                                            src="/media/{{ article.image }}" onerror="reload_page()">
+                                                    </div>
+                                                    <script type="jsv/128_"></script>
+                                                    <script type="jsv/132_"></script>
                                                 </div>
-                                                <script type="jsv/128_"></script>
-                                                <script type="jsv/132_"></script>
+                                                <div class="product-card__middle-wrap">
+                                                    <script type="jsv#133_"></script>
+                                                    <script type="jsv/133_"></script>
+                                                    <p
+                                                        class="product-card__brand-wrap product-card__brand-wrap--no-wrap">
+                                                        {{ article.title }}
+                                                    </p>
+                                                </div>
+                                                <script type="jsv#136_"></script>
+                                                <script type="jsv/136_"></script>
                                             </div>
-                                            <div class="product-card__middle-wrap">
-                                                <script type="jsv#133_"></script>
-                                                <script type="jsv/133_"></script>
-                                                <p class="product-card__brand-wrap product-card__brand-wrap--no-wrap">
-                                                    {{ article.title }}
-                                                </p>
-                                            </div>
-                                            <script type="jsv#136_"></script>
-                                            <script type="jsv/136_"></script>
-                                        </div>
                                         </a>
                                     </article>
                                     {% endfor %}
@@ -491,6 +493,6 @@
                                     </div>
                                     <!--/noindex-->
                                     {% endblock %}
-                                    </body>
+</body>
 
 </html>

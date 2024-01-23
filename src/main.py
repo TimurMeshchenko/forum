@@ -1,9 +1,7 @@
-from flask import Flask, render_template, request, send_from_directory
-
+from flask import Flask, render_template, send_from_directory
 from database import Base, engine, get_db
 from models import Article
 from slugify import slugify
-import html
 
 app = Flask(__name__)
 
@@ -31,12 +29,13 @@ def article(slug):
     with get_db() as db:
         article = db.query(Article).filter(Article.slug == slug).first()
 
-    return render_template('article.html', article=article)
+    return render_template(f'{article.category}.html', article=article)
 
 @app.get('/media/<filename>')
-@app.get('/media/<folder>/<filename>')
-def media(folder=None, filename=None):
-    if folder is not None:
-        return send_from_directory(f'media/{folder}', filename)
+@app.get('/media/<parent_folder>/<category_folder>/<article_folder>/<filename>') 
+def media(parent_folder=None, category_folder=None, article_folder=None, filename=None):
+    if parent_folder is not None:
+        return send_from_directory(f'media/{parent_folder}/{category_folder}/{article_folder}', filename)
     else:
         return send_from_directory('media', filename)
+    

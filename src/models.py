@@ -9,3 +9,4 @@ class Article(Base):
     content = Column(Text, nullable=False)
     slug = Column(String(250), unique=True, nullable=True)
     image = Column(String(250), nullable=False)
+    category = Column(String(250), nullable=False)
