@@ -39,33 +39,6 @@
     }
 
     @font-face {
-      font-family: "PTRoot";
-      src: url(/_nuxt/fonts/PT_Root_UI_Bold.94617d3.eot);
-      src: url(/_nuxt/fonts/PT_Root_UI_Bold.94617d3.eot?#iefix) format("embedded-opentype"), url(/_nuxt/fonts/PT_Root_UI_Bold.605d5b6.woff2) format("woff2"), url(/_nuxt/fonts/PT_Root_UI_Bold.b64e0b6.woff) format("woff"), url(/_nuxt/fonts/PT_Root_UI_Bold.f52fcf2.ttf) format("truetype");
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap
-    }
-
-    @font-face {
-      font-family: "PTRoot";
-      src: url(/_nuxt/fonts/PT_Root_UI_Medium.318615d.eot);
-      src: url(/_nuxt/fonts/PT_Root_UI_Medium.318615d.eot?#iefix) format("embedded-opentype"), url(/_nuxt/fonts/PT_Root_UI_Medium.8ceb490.woff2) format("woff2"), url(/_nuxt/fonts/PT_Root_UI_Medium.87a5194.woff) format("woff"), url(/_nuxt/fonts/PT_Root_UI_Medium.4a2a3e5.ttf) format("truetype");
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap
-    }
-
-    @font-face {
-      font-family: "PTRoot";
-      src: url(/_nuxt/fonts/PT_Root_UI_Regular.98910b8.eot);
-      src: url(/_nuxt/fonts/PT_Root_UI_Regular.98910b8.eot?#iefix) format("embedded-opentype"), url(/_nuxt/fonts/PT_Root_UI_Regular.ee8f855.woff2) format("woff2"), url(/_nuxt/fonts/PT_Root_UI_Regular.1941b20.woff) format("woff"), url(/_nuxt/fonts/PT_Root_UI_Regular.5a7d120.ttf) format("truetype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap
-    }
-
-    @font-face {
       font-family: "PTRootUIVF";
       src: url(/_nuxt/fonts/PT-Root-UI_VF.f588241.woff2) format("woff2"), url(/_nuxt/fonts/PT-Root-UI_VF.aa2a249.woff) format("woff");
       font-weight: 400;
@@ -5863,11 +5836,6 @@
       width: 100%
     }
 
-    img.lazyload,
-    img.lazyloading {
-      background: url(/_nuxt/img/placeholder.8e7b314.svg) top/cover no-repeat
-    }
-
     @media(min-width:768px) {
       .template-broadside .single-article__post-content.single-article__content-container iframe {
         position: relative !important;
@@ -7993,7 +7961,6 @@
       margin: 0 24px;
       padding-bottom: 45%;
       position: relative;
-      background: url(/_nuxt/img/placeholder.8e7b314.svg) top/cover no-repeat
     }
 
     .article-card__cover img {
@@ -17612,7 +17579,6 @@
       pointer-events: none
     }
   </style>
-  <script charset="utf-8" src="/_nuxt/c53ef2e.js"></script>
   <style type="text/css">
     .fs-gallery[data-v-8deac5e6] {
       position: relative;
@@ -17740,14 +17706,6 @@
       left: 10px
     }
   </style>
-  <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-CCKHQSS9XE" async=""></script>
-  <script charset="utf-8" src="/_nuxt/929c807.js"></script>
-  <script charset="utf-8" src="/_nuxt/b486783.js"></script>
-  <script charset="utf-8" src="/_nuxt/4a78068.js"></script>
-  <script charset="utf-8" src="/_nuxt/1370ac9.js"></script>
-  <script charset="utf-8" src="/_nuxt/2218b13.js"></script>
-  <script charset="utf-8" src="/_nuxt/8203dd6.js"></script>
-  <script charset="utf-8" src="/_nuxt/fbff403.js"></script>
   <style type="text/css">
     .desktop img[data-v-d8d82170],
     .mobile img[data-v-d8d82170] {
@@ -18647,7 +18605,57 @@
                     <div class="single-article__wrapper">
                       <section class="single-article">
                           {{ article.content | safe }}
-                        <div class="widgets-renderer below-comments-widgets__container"><!----></div>
+                      
+                        <div style="
+                          width: 100%;
+                          height: 100%;
+                          display: flex;
+                          padding: 0 24px;
+                          justify-content: center;">
+                          <div style="
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            border-radius: 10px;
+                            border: 1px solid #e8e8e8;">                          
+                            <textarea rows="1" aria-invalid="false" name="text" placeholder="Оставить комментарий" class="Input_input___YBKm Input_inputMultiline___1t_w Input_inputAdornedEnd__cpAGk" style="width: 100%;padding: 20px;border: 0;overflow: hidden;"></textarea><button style="padding-right: 20px;">Отправить</button>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-2 md:gap-3 py-2" style="
+                            display: flex;
+                            border-radius: 10px;
+                            width: 100%;
+                            margin: 20px auto;
+                            padding: 0px 24px;
+                        "><a component="a" href="/user/2152259" style="
+                            display: flex;
+                            align-items: center;
+                        "><img src="https://remanga.org/media/users/2152259/avatar_85da353d.jpg" alt="maradyxx"
+                              class="CommentAvatar_mediaAvatar__8Cd_g" style="
+                            width: 40px;
+                            border-radius: 9999px;
+                        "></a>
+                          <div class="CommentCard_mediaBody__dmb6q"
+                            style="overflow: hidden;border-radius: 12px;background: var(--bg-paper);font-size: 16px;line-height: 1.5;word-break: break-word;width: 100%;margin-left: 10px;">
+                            <div class="CommentCard_mediaContent__M6qW1 scoreBorder" style="
+                        ">
+                              <div class="CommentHeading_mediaHeading__H8tse flex items-center" style="
+                            min-height: 30px;
+                            font-size: 15px;
+                            overflow: hidden;
+                            align-items: center;
+                            display: flex;
+                        "><a component="a" class="CommentHeading_username__xmlzw" href="" style="
+                            color: black;
+                            font-size: 13px;
+                            font-weight: 600;
+                        ">maradyxx</a>
+
+                              </div>
+                              <div>По манхве начали снимать дораму!</div>
+                            </div>
+                          </div>
+                        </div>
                       </section>
                     </div><!----><!---->
                   </div>
@@ -18655,22 +18663,7 @@
               </section>
             </div>
           </div>
-          <div data-cy="nav-menu-container" class="nav-menu-container main" data-v-6dc2b466="" data-v-1e41de28="">
-            <div class="nav-menu-container__logo" data-v-6dc2b466=""><a href="/"
-                name="Вернуться на главную страницу сайта" class="nav-menu-container__logo-link nuxt-link-active"
-                style="--cursor: pointer;" data-v-6dc2b466=""><svg xmlns="http://www.w3.org/2000/svg"
-                  class="lh-logo-black icon sprite-icons" data-v-6dc2b466="">
-                  <use href="/_nuxt/6795e2804f01d43852d41d3ec835dec5.svg#i-lh-logo-black"
-                    xlink:href="/_nuxt/6795e2804f01d43852d41d3ec835dec5.svg#i-lh-logo-black" data-v-6dc2b466=""></use>
-                </svg></a><svg xmlns="http://www.w3.org/2000/svg" class="burger-icon icon sprite-icons"
-                data-v-6dc2b466="">
-                <use href="/_nuxt/6795e2804f01d43852d41d3ec835dec5.svg#i-burger-icon"
-                  xlink:href="/_nuxt/6795e2804f01d43852d41d3ec835dec5.svg#i-burger-icon" data-v-6dc2b466=""></use>
-              </svg></div><!---->
-          </div>
         </section>
-        <div data-v-b89c77b2="" data-v-1e41de28="" data-cy="dark-background" class="dark-background"
-          style="display: none;"></div>
         <div data-v-1e41de28="" class="the-badges__wrapper"><!----></div><!----><!----><!---->
       </div>
     </div>
