@@ -1,70 +1,48 @@
 let offset = 0;
 const limit = 30;
 
-let is_all_products_loaded = false;
-let is_active_addition_products = false;
+let is_all_articles_loaded = false;
+let is_active_addition_articles = false;
 
-add_products_html();
+add_articles_html();
 
 window.addEventListener("scroll", async () => {
     if (
-      is_last_product_scrolled() &&
-      !is_active_addition_products &&
-      !is_all_products_loaded
+      is_last_article_scrolled() &&
+      !is_active_addition_articles &&
+      !is_all_articles_loaded
     ) {
-      is_active_addition_products = true;
-      await add_products_html();
-      is_active_addition_products = false;
+      is_active_addition_articles = true;
+      await add_articles_html();
+      is_active_addition_articles = false;
     }
 });
 
-function is_last_product_scrolled() {
-  const product_element = document.querySelector(".main-page__product");
+function is_last_article_scrolled() {
+  const article_element = document.querySelector(".main-page__product");
   const scrolledHeight = window.innerHeight + window.scrollY;
 
   return (
-    scrolledHeight + product_element.offsetHeight >=
+    scrolledHeight + article_element.offsetHeight >=
     document.documentElement.scrollHeight
   );
 } 
 
-async function add_products_html() {
-    const products_page_html = await get_products_page_html();
-    
-    document
-      .querySelector(".main-page__content")
-      .insertAdjacentHTML("beforeend", products_page_html);
+async function add_articles_html() {
+  const articles_page_html = await get_articles_page_html();
 
-    await handle_new_basket_buttons();
-    await listen_products_click();
-    
-    offset += limit;
+  document
+    .querySelector(".main-page__content")
+    .insertAdjacentHTML("beforeend", articles_page_html);
+
+  offset += limit;
 }
 
-async function get_products_page_html() {
+async function get_articles_page_html() {
     const response = await fetch(
-      `${window.location.href}api/get_products_page?offset=${offset}&limit=${limit}`
+      `${window.location.href}api/get_articles_page?offset=${offset}&limit=${limit}`
     );
-    const products_page_html_dict = await response.json();
-    const products_page_html = products_page_html_dict["products"];
-    return products_page_html;
-}
-
-async function handle_new_basket_buttons() {
-    const products_elements = main_page_content.querySelectorAll(
-      ".main-page__product"
-    );
-
-    for (let i = offset; i < products_elements.length; i++) {
-        const product_id = products_elements[i].dataset.nmId;
-        const button_basket = products_elements[i].querySelector(
-          ".product-card__add-basket"
-        );
-
-        if (basket_products_id.has(Number(product_id))) {
-          change_button_in_basket(button_basket);
-        } else {
-          button_basket.addEventListener("click", save_product_id);
-        }
-    }    
+    const articles_page_html_dict = await response.json();
+    const articles_page_html = articles_page_html_dict["articles"];
+    return articles_page_html;
 }

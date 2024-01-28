@@ -24,6 +24,9 @@ def download_images(article_object, article_media_folder):
         file_name = image_url.split('/')[-1]
         destination_file = f"{article_media_folder}/{file_name}"
         
+        if image_url == '':
+            continue
+
         article_object['content'] = article_object['content'].replace(image_url, f"/{destination_file}") 
         download_image(image_url, destination_file)
         add_article_img(article_object, destination_file, i)
@@ -46,6 +49,16 @@ def add_article_img(article_object, destination_file, i):
         article_object['img'] = '/'.join(db_file_path)
 
 articles_objects = []
+
+
+
+
+
+
+
+
+
+
 db_connection = connect_to_database()
 cursor = db_connection.cursor() 
 

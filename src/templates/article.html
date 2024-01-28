@@ -7454,7 +7454,7 @@
     }
 
     .template-three-column .single-article {
-      max-width: 58%;
+      max-width: 55%;
       margin: 0 auto
     }
 
@@ -18475,6 +18475,12 @@
     .recipes__list[data-v-468d6ce0] {
       max-width: 100vw
     }
+  
+  @media (min-width: 768px) {
+    .comments_container {
+      padding: 0 24px !important;
+    }
+  }
   </style>
 {% endblock %}
 
@@ -18489,65 +18495,6 @@
         <section class="page route-single template-three-column" data-v-1e41de28="">
           <div class="page__widgets-above-header" data-v-1e41de28="">
             <div class="widgets-renderer" data-v-1e41de28=""><!----></div>
-          </div>
-          <div class="primary-menu primary-menu--mobile" data-v-1e41de28="">
-            <div class="arrow-menu-wrapper" data-v-5c79a272="">
-              <div class="arrow-menu-test arrow-menu-test arrow-menu-test--light" data-v-6881041d="" data-v-5c79a272="">
-                <nav
-                  class="swiper arrow-menu-test__navigation arrow-menu-test__navigation--right-visible arrow-menu-test__navigation--left-visible swiper-initialized swiper-horizontal swiper-pointer-events swiper-free-mode"
-                  data-v-6881041d="">
-                  <div class="swiper-wrapper arrow-menu-test__list" data-v-6881041d=""
-                    style="transition-duration: 0ms;">
-                    <div class="menu-item menu-item--light" data-v-58706162="" data-v-5c79a272="" data-v-6881041d="">
-                      <!----><a href="/top/" name="" class="link menu-item__link menu-item__link--light"
-                        style="--bg: none; --text: #5C5C5C;" data-v-58706162=""><span
-                          class="menu-item__title menu-item__title--light" data-v-58706162="">Лучшее</span></a>
-                    </div>
-                    <div class="menu-item menu-item--light" data-v-58706162="" data-v-5c79a272="" data-v-6881041d="">
-                      <!----><a href="/topics/" name="" class="link menu-item__link menu-item__link--light"
-                        style="--bg: none; --text: #5C5C5C;" data-v-58706162=""><span
-                          class="menu-item__title menu-item__title--light" data-v-58706162="">Рубрики</span></a>
-                    </div>
-                    <div class="menu-item menu-item--light" data-v-58706162="" data-v-5c79a272="" data-v-6881041d="">
-                      <!----><a href="/recipes/" name="" class="link menu-item__link menu-item__link--light"
-                        style="--bg: none; --text: #5C5C5C;" data-v-58706162=""><span
-                          class="menu-item__title menu-item__title--light" data-v-58706162="">Рецепты</span></a>
-                    </div>
-                    <div class="menu-item menu-item--light" data-v-58706162="" data-v-5c79a272="" data-v-6881041d="">
-                      <!----><a href="https://lifehacker.ru/promokod/" name=""
-                        class="link menu-item__link menu-item__link--light" style="--bg: none; --text: #5C5C5C;"
-                        data-v-58706162=""><span class="menu-item__title menu-item__title--light"
-                          data-v-58706162="">Промокоды</span></a>
-                    </div>
-                    <div class="menu-item menu-item--light" data-v-58706162="" data-v-5c79a272="" data-v-6881041d="">
-                      <!----><a href="https://lifehacker.ru/kursy/" name=""
-                        class="link menu-item__link menu-item__link--light" style="--bg: none; --text: #5C5C5C;"
-                        data-v-58706162=""><span class="menu-item__title menu-item__title--light"
-                          data-v-58706162="">Курсы</span></a>
-                    </div>
-                    <div class="menu-item menu-item--light" data-v-58706162="" data-v-5c79a272="" data-v-6881041d="">
-                      <!----><a href="/topics/podcast/" name="" class="link menu-item__link menu-item__link--light"
-                        style="--bg: none; --text: #5C5C5C;" data-v-58706162=""><span
-                          class="menu-item__title menu-item__title--light" data-v-58706162="">Подкасты</span></a>
-                    </div>
-                    <div class="menu-item menu-item--light" data-v-58706162="" data-v-5c79a272="" data-v-6881041d="">
-                      <!----><a href="https://lh.su/1ts9" name="" class="link menu-item__link menu-item__link--light"
-                        style="--bg: none; --text: #5C5C5C;" data-v-58706162=""><span
-                          class="menu-item__title menu-item__title--light" data-v-58706162="">Сервисы</span></a>
-                    </div>
-                    <div class="menu-item menu-item--light" data-v-58706162="" data-v-5c79a272="" data-v-6881041d="">
-                      <!----><a href="/topics/kolonka/" name="" class="link menu-item__link menu-item__link--light"
-                        style="--bg: none; --text: #5C5C5C;" data-v-58706162=""><span
-                          class="menu-item__title menu-item__title--light" data-v-58706162="">Колонки</span></a>
-                    </div>
-                  </div>
-                </nav><button
-                  class="arrow-button arrow-menu-test__button arrow-menu-test__button--left arrow-button--light"
-                  data-v-31d098ab="" data-v-6881041d=""></button><button
-                  class="arrow-button arrow-menu-test__button arrow-menu-test__button--right arrow-button--light"
-                  data-v-31d098ab="" data-v-6881041d=""></button>
-              </div>
-            </div>
           </div>
           <div class="content-wrapper-for-branding__wrapper" data-v-1e41de28="">
             <div id="content-wrapper-for-branding" class="content-wrapper-for-branding"></div>
@@ -18606,11 +18553,11 @@
                       <section class="single-article">
                           {{ article.content | safe }}
                       
-                        <div style="
+                        <div class="comments_container" style="
                           width: 100%;
                           height: 100%;
                           display: flex;
-                          padding: 0 24px;
+                          padding: 0 16px;
                           justify-content: center;">
                           <div style="
                             width: 100%;
@@ -18618,43 +18565,47 @@
                             display: flex;
                             border-radius: 10px;
                             border: 1px solid #e8e8e8;">                          
-                            <textarea rows="1" aria-invalid="false" name="text" placeholder="Оставить комментарий" class="Input_input___YBKm Input_inputMultiline___1t_w Input_inputAdornedEnd__cpAGk" style="width: 100%;padding: 20px;border: 0;overflow: hidden;"></textarea><button style="padding-right: 20px;">Отправить</button>
+                            <textarea rows="1" aria-invalid="false" name="text" placeholder="Оставить комментарий" class="Input_input___YBKm Input_inputMultiline___1t_w Input_inputAdornedEnd__cpAGk" style="width: 100%;padding: 20px;border: 0;overflow: hidden;"></textarea><button class="Button_button__JOS9_" style="padding-right: 20px;">Отправить</button>
                           </div>
                         </div>
-                        <div class="flex flex-row gap-2 md:gap-3 py-2" style="
-                            display: flex;
-                            border-radius: 10px;
-                            width: 100%;
-                            margin: 20px auto;
-                            padding: 0px 24px;
-                        "><a component="a" href="/user/2152259" style="
-                            display: flex;
-                            align-items: center;
-                        "><img src="https://remanga.org/media/users/2152259/avatar_85da353d.jpg" alt="maradyxx"
-                              class="CommentAvatar_mediaAvatar__8Cd_g" style="
-                            width: 40px;
-                            border-radius: 9999px;
-                        "></a>
-                          <div class="CommentCard_mediaBody__dmb6q"
-                            style="overflow: hidden;border-radius: 12px;background: var(--bg-paper);font-size: 16px;line-height: 1.5;word-break: break-word;width: 100%;margin-left: 10px;">
-                            <div class="CommentCard_mediaContent__M6qW1 scoreBorder" style="
-                        ">
-                              <div class="CommentHeading_mediaHeading__H8tse flex items-center" style="
-                            min-height: 30px;
-                            font-size: 15px;
-                            overflow: hidden;
-                            align-items: center;
-                            display: flex;
-                        "><a component="a" class="CommentHeading_username__xmlzw" href="" style="
-                            color: black;
-                            font-size: 13px;
-                            font-weight: 600;
-                        ">maradyxx</a>
+                        <div class="comments">
+                          {% for comment in comments|sort(attribute='created_at', reverse=true) %}
+                          <div class="comments_container flex flex-row gap-2 md:gap-3 py-2" style="
+                              display: flex;
+                              border-radius: 10px;
+                              width: 100%;
+                              margin: 20px auto;
+                              padding: 0px 16px;
+                          "><p component="a" style="
+                              display: flex;
+                              align-items: center;
+                          "><img src="/media/users_avatars/no_avatar.jpg" alt=""
+                                class="CommentAvatar_mediaAvatar__8Cd_g" style="
+                              width: 40px;
+                              border-radius: 9999px;
+                          "></p>
+                            <div class="CommentCard_mediaBody__dmb6q"
+                              style="overflow: hidden;border-radius: 12px;background: var(--bg-paper);font-size: 16px;line-height: 1.5;word-break: break-word;width: 100%;margin-left: 10px;">
+                              <div class="CommentCard_mediaContent__M6qW1 scoreBorder" style="
+                          ">
+                                <div class="CommentHeading_mediaHeading__H8tse flex items-center" style="
+                              min-height: 30px;
+                              font-size: 15px;
+                              overflow: hidden;
+                              align-items: center;
+                              display: flex;
+                          "><p component="a" class="CommentHeading_username__xmlzw" style="
+                              color: black;
+                              font-size: 13px;
+                              font-weight: 600;
+                          ">{{ comment.author_name }}</p>
 
+                                </div>
+                                <div>{{ comment.content }}</div>
                               </div>
-                              <div>По манхве начали снимать дораму!</div>
                             </div>
                           </div>
+                          {% endfor %}
                         </div>
                       </section>
                     </div><!----><!---->
@@ -18668,4 +18619,10 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const articles_id = "{{ article.id }}";
+  </script>
+  <script src="{{ url_for('static', filename='js/comment_input_stylization.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/comment_manager.js') }}"></script>
 {% endblock %}

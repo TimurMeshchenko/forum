@@ -1,0 +1,34 @@
+{% for article in articles %}
+<article data-nm-id="" data-popup-nm-id="113035977" data-index="0" data-analitics-code="MCS" data-target-url="MI"
+    class="main-page__product product-card j-product-item product-card--hoverable j-content-item"
+    data-link="class{merge: ~parent.hideOn6 toggle=&#39;product-hide-6&#39;}class{merge: ~parent.hideOn4 toggle=&#39;product-hide-4&#39;}class{merge: ~parent.hideOn2 toggle=&#39;product-hide-2&#39;}"
+    style="">
+    <a href="/article/{{ article.slug }}">
+        <div class="product-card__wrapper">
+            <div class="product-card__top-wrap">
+                <script type="jsv#126_"></script>
+                <script type="jsv#127_"></script>
+                <script type="jsv/127_"></script>
+                <script type="jsv/126_"></script>
+                <div class="product-card__tips product-card__tips--top"> </div>
+                <script type="jsv#128_"></script>
+                <div class="product-card__img-wrap img-plug j-thumbnail-wrap" data-plug-text="Фото отсутствует">
+                    <img class="j-thumbnail" loading="lazy" width="516" height="688" src="/media/{{ article.image }}"
+                        onerror="reload_page()">
+                </div>
+                <script type="jsv/128_"></script>
+                <script type="jsv/132_"></script>
+            </div>
+            <div class="product-card__middle-wrap">
+                <script type="jsv#133_"></script>
+                <script type="jsv/133_"></script>
+                <p class="product-card__brand-wrap product-card__brand-wrap--no-wrap">
+                    {{ article.title }}
+                </p>
+            </div>
+            <script type="jsv#136_"></script>
+            <script type="jsv/136_"></script>
+        </div>
+    </a>
+</article>
+{% endfor %}

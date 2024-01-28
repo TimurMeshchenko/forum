@@ -1,4 +1,5 @@
-const articles_a_element = document.querySelectorAll(".article-card-search__link");
+// const articles_a_element = document.querySelectorAll(".article-card-search__link");
+const articles_a_element = document.querySelectorAll(".lh-small-article-card__link");
 const articles_objects = [];
 const extra_elements = [
   ".read-also",
@@ -18,7 +19,7 @@ for (let i = 0; i < articles_a_element.length; i++) {
   const main_element = tempDiv.querySelector(".single-article__content");
 
   for (let extra_element of extra_elements) {
-    main_element.querySelector(extra_element).remove();
+    main_element.querySelector(extra_element)?.remove();
   }
   
   const imgs = await get_article_imgs(main_element);
