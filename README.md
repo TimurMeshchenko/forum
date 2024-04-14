@@ -1,6 +1,13 @@
 # forum
 
-Форум на flask.
+# Настройка postgresql
+
+sudo -u postgres psql
+create database forum;
+sudo -u postgres psql -d forum -f database_backups/release_plain.sql
 
 ## Запуск
-poetry run python -m flask --app .\main.py run --reload
+
+sudo poetry install
+cd src
+sudo poetry run python -m flask --app main.py run --reload
