@@ -10,4 +10,4 @@ sudo -u postgres psql -d forum -f database_backups/release_plain.sql
 
 sudo poetry install
 cd src
-sudo poetry run python -m flask --app main.py run --reload
+sudo poetry run gunicorn main:app
