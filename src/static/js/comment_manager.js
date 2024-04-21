@@ -15,7 +15,7 @@ update_data_callback = () => {
     "><p component="a" style="
         display: flex;
         align-items: center;
-    "><img src="/media/users_avatars/no_avatar.jpg" alt=""
+    "><img src="/forum/media/users_avatars/no_avatar.jpg" alt=""
           class="CommentAvatar_mediaAvatar__8Cd_g" style="
         width: 40px;
         border-radius: 9999px;
@@ -71,5 +71,9 @@ document
       author_name: author_name,
     });
 
-    fetch_request("/api/create_comment", fetch_data, update_data_callback);
+    fetch_request(
+      "/forum/api/create_comment",
+      fetch_data,
+      update_data_callback
+    );
   });

@@ -40,7 +40,7 @@ async function add_articles_html() {
 
 async function get_articles_page_html() {
     const response = await fetch(
-      `${window.location.href}api/get_articles_page?offset=${offset}&limit=${limit}`
+      `${window.location.href}/api/get_articles_page?offset=${offset}&limit=${limit}`
     );
     const articles_page_html_dict = await response.json();
     const articles_page_html = articles_page_html_dict["articles"];

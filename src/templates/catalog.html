@@ -25,7 +25,7 @@
             <div class="header__container">
                 <div class="header__bottom">
                     <div class="header__nav-element nav-element">
-                        <a class="nav-element__logo j-wba-header-item" data-wba-header-name="Main" href="/"
+                        <a class="nav-element__logo j-wba-header-item" data-wba-header-name="Main" href="/forum"
                             style="width: 45px;height: 50px;">
                             <img src="{{ url_for('media', filename='logo.png') }}">
                         </a>
@@ -55,9 +55,6 @@
         </header>
         {% block body %}
         <main class="main left-bg" role="main" id="body-layout">
-            <div class="basket_alert">
-                <p class="basket_alert_message">Товар добавлен в корзину</p>
-            </div>
             <div id="mainContainer" class="main__container">
                 <div id="app">
                     <div data-link="visible{:containerId == ~router.activeContainer &amp;&amp; !~router.showPreview}"
