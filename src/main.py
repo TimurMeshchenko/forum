@@ -3,7 +3,7 @@ from database import Base, engine, get_db
 from models import Article, Comment
 from slugify import slugify
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/forum/static')
 
 Base.metadata.create_all(engine)
 
@@ -17,14 +17,14 @@ def create_articles_slugs():
 
 create_articles_slugs() 
 
-@app.get("/forum")
+@app.get("/")
 def catalog():
     with get_db() as db:
         articles = db.query(Article).all()
     
     return render_template('catalog.html', articles=articles)
 
-@app.get('/forum/article/<slug>')
+@app.get('/article/<slug>')
 def article(slug):
     with get_db() as db:
         article = db.query(Article).filter(Article.slug == slug).first()
@@ -32,7 +32,7 @@ def article(slug):
 
     return render_template('article.html', article=article, comments=comments)
 
-@app.post('/forum/api/create_comment')
+@app.post('/api/create_comment')
 def create_comment():
     data = request.json
     content = data.get('content')
@@ -45,7 +45,7 @@ def create_comment():
         db.commit()
     return jsonify({'status': 'success'})
 
-@app.get('/forum/api/get_articles_page')
+@app.get('/api/get_articles_page')
 def get_articles_page():
     offset = int(request.args.get('offset', 0))
     limit = int(request.args.get('limit', 30))

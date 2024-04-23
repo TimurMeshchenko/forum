@@ -4,11 +4,11 @@
 restart_gunicorn() {
     echo "Restarting Gunicorn..."
     pkill -f gunicorn
-    gunicorn main:app &
+    gunicorn main:app --bind 0.0.0.0:8002 &
 }
 
 # Start Gunicorn
-gunicorn main:app &
+gunicorn main:app --bind 0.0.0.0:8002 &
 
 # Watch for changes in the project directory and restart Gunicorn when necessary
 while inotifywait -r -e modify,move,create,delete /home/deb/Python/pet_projects/forum; do 

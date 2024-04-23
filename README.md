@@ -10,6 +10,6 @@ sudo -u postgres psql -d forum -f database_backups/release_plain.sql
 
 sudo poetry install
 cd src
-sudo poetry run gunicorn main:app
+sudo poetry run gunicorn main:app --bind 0.0.0.0:8002
 
 sudo poetry run ./run_with_reload.sh
